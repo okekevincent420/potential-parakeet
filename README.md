@@ -22,3 +22,10 @@ The results are then stored in a CSV file.
 
 
 *Simply install requirements.txt!*
+
+**Running the Project**
+-
+Run the sole python script in any IDE of choice. This project was created using VSCode, but other IDEs can be used such as PyCharm. 
+
+
+*Project Source: https://roadmap.sh/projects/job-listings-scraper*
