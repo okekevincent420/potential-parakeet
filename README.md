@@ -20,4 +20,5 @@ The results are then stored in a CSV file.
 - CSV module - to save the job listings
 - Pandas - for data manipulation
 
+
 *Simply install requirements.txt!*
