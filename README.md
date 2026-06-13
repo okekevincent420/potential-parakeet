@@ -19,4 +19,5 @@ The results are then stored in a CSV file.
 - Beautiful Soup (bs4) - to parse and navigate HTML
 - CSV module - to save the job listings
 - Pandas - for data manipulation
+
 *Simply install requirements.txt!*
