@@ -42,13 +42,6 @@ def title(soup):
         result.append(title)
     return result
 
-    # result = data.split('\n')
-
-    # res=[]
-    # for i in range(1, len(result)):
-    #     if len(result[i]) > 1:
-    #         res.append(result[i])
-    # return(res)
 
 # Filter company name using find_all function
 def company_name(soup):
@@ -62,12 +55,6 @@ def company_name(soup):
         result.append(name)
     return result
 
-    # res=[]
-    # for i in range(1, len(result)):
-    #     if len(result[i]) > 1:
-    #         res.append(result[i])
-    # return(res)
-
 # Filter company location using find_all function
 def company_location(soup):
     #find the html tag with find()
@@ -80,17 +67,6 @@ def company_location(soup):
         result.append(location)
     return result
 
-
-
-
-
-
-
-# for data in soup.find_all():
-#     company = soup.find('h3', class_='subtitle is-6 company')
-#     location = soup.find('p', class_='location')
-#     job_detail = soup.find()
-#     print(data.get_text())
 
 def main():
 
@@ -111,19 +87,6 @@ def main():
     # Empty dataframe to store scraped data 
     job_data = []    
 
-    # Traverse both data
-    # temp = 0
-    # for i in range(1, len(job_det)):
-    #     j = temp
-    #     for i in (range(temp, 2+temp)):
-    #         print('Job Details and Job Title : ' + job_title[j])
-
-    #         temp = j
-    #         print('Job : ' + job_det[i])
-    #         print('------------------------------------------------')
-
-    #         print('Company Name : ' + name[i])
-    #         print('Company Location : ' + location[i])
 
     for t, n, l, u in zip(job_title, name, location, job_det) :
         job_data.append({
