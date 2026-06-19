@@ -1,31 +1,67 @@
-**Python Job Listings Scraper** 
--
+# Python Job Listings Scraper
 
-This is a web scraper, built with Python, that collects job listings from a fake jobs website: *https://realpython.github.io/fake-jobs/*
+A Python web scraper that extracts structured job listing data from a target site 
+and exports it to CSV for further analysis or filtering.
 
-The scraper extracts the following information for each job posting:
+---
 
-- Job title
-- Company name
-- Location
-- Job detail page URL
+## Problem Statement
 
-The results are then stored in a CSV file. 
+Manually browsing job boards to collect and compare listings is time-consuming. 
+This scraper automates the collection of job data — title, company, location, and 
+detail page URL — into a clean, structured format ready for analysis or bulk review.
 
-**Technological Requirements**
--
-- Python
-- Requests - to fetch the webpage
-- Beautiful Soup (bs4) - to parse and navigate HTML
-- CSV module - to save the job listings
-- Pandas - for data manipulation
+---
 
+## Tech Stack
 
-*Simply install requirements.txt!*
+- **Python** — core language
+- **Requests** — HTTP requests to fetch page content
+- **Beautiful Soup (bs4)** — HTML parsing and data extraction
+- **Pandas** — data manipulation and export
+- **CSV module** — output formatting
 
-**Running the Project**
--
-Run the sole python script in any IDE of choice. This project was created using VSCode, but other IDEs can be used such as PyCharm. 
+---
 
+## How It Works
 
-*Project Source: https://roadmap.sh/projects/job-listings-scraper*
+1. Sends an HTTP GET request to the target jobs page
+2. Parses the HTML response using Beautiful Soup
+3. Extracts job title, company name, location, and detail page URL for each listing
+4. Stores all results in a structured CSV file
+
+---
+
+## Output
+
+A CSV file containing one row per job listing:
+
+| Job Title | Company | Location | URL |
+|-----------|---------|----------|-----|
+| ... | ... | ... | ... |
+
+---
+
+## How to Run
+
+```bash
+git clone <your-repo-url>
+cd job-listings-scraper
+pip install -r requirements.txt
+python scraper.py
+```
+
+---
+
+## What I'd Improve Next
+
+- Extend to scrape real job boards (LinkedIn, Indeed) with pagination support
+- Add filtering by keyword, location, or job type
+- Schedule automated runs with `cron` or GitHub Actions
+- Store results in a database instead of CSV for easier querying
+- Add duplicate detection across runs
+
+---
+
+*Project inspired by [roadmap.sh](https://roadmap.sh/projects/job-listings-scraper)*
+
