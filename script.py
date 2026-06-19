@@ -26,8 +26,10 @@ def job_detail(soup):
     result = []
 
     for item in data:
-        url = item.find('a', class_='card-footer-item', href=True)['href'].strip()
-        result.append(url)
+        urls = item.find_all('a', class_='card-footer-item', href=True)
+        for url in urls:
+            if url.text.strip() == 'Apply':
+                result.append(url['href'].strip())
     return result
 
 # Filter job title using find_all function
@@ -90,15 +92,15 @@ def main():
 
     for t, n, l, u in zip(job_title, name, location, job_det) :
         job_data.append({
-            'Job Title': job_title,
-            'Company': name,
-            'Location': location,
-            'URL': job_det
+            'Job Title': t,
+            'Company': n,
+            'Location': l,
+            'URL': u
         })
 
     df = pd.DataFrame(job_data)
     print(df)
-    df.to_csv('data.csv')
+    df.to_csv('data.csv', index=False)
 
 if __name__ == '__main__':
     main()
